@@ -2,9 +2,9 @@ cask "visual-studio-code-linux" do
   arch arm: "arm64", intel: "x64"
   os linux: "linux"
 
-  version "1.107.1"
-  sha256 arm64_linux:  "c7f8d65f056179542502d83654e59e0d4df14760e99c70a1213d5281521108ad",
-         x86_64_linux: "a9a19e20dd09c61ec1af7d67d9dec2455004d0fbd35120fe1d24588c123f9474"
+  version "1.109.4"
+  sha256 arm64_linux:  "0b3ee68dc9b41dca112b9100e718bd0073b16e210eb7d24bf83adf77afed601c",
+         x86_64_linux: "eb39ae625df840c1b75b987f8027e25bd6ad2b80a9768409bedb70eb2e2ccbd4"
 
   url "https://update.code.visualstudio.com/#{version}/#{os}-#{arch}/stable"
   name "Microsoft Visual Studio Code"
