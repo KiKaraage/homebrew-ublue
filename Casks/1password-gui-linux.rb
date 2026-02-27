@@ -2,9 +2,9 @@ cask "1password-gui-linux" do
   arch intel: "x86_64", arm: "aarch64"
   os linux: "linux"
 
-  version "8.11.22"
-  sha256 arm64_linux:  "3e9b0ab8535156dfde616be5999c68eadc8c0bf8147cbac801660fa0a227b6b5",
-         x86_64_linux: "218c021112722fb979a8516f4e77937222954f63d29287aecd0b2231f768995f"
+  version "8.12.5"
+  sha256 arm64_linux:  "ff2f2953c8972e0286ab6b5c20c2224673b88625d1eab4cfa7c8d3238dd2b798",
+         x86_64_linux: "a1af78297825e11fc7125c52b3c08b2399afa53ff80181dfbce0e41abde2b495"
 
   arch_suffix =
     case arch
