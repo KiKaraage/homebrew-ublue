@@ -1,6 +1,6 @@
 cask "framework-tool" do
-  version "0.4.5"
-  sha256 "e94af70b2a287577c3d7e26e92e1a3910bd27b725543ac5763b7cd348d8fb57d"
+  version "0.6.4"
+  sha256 "83b04df1fbd950c88bb569e91503cbf7a616663ad7ff6cbcb0e99a67509a8584"
 
   url "https://github.com/FrameworkComputer/framework-system/releases/download/v#{version}/framework_tool"
   name "Framework System Tool"
