@@ -1,16 +1,16 @@
 cask "goose-linux" do
   version "1.37.0"
-  sha256 "829341de94b1b86e568d33558d522d5ca547f930a5fb473747110641de7dff51"
+  sha256 "4808c11e9f16b9749b0465dc37ab660480165fd9d0e54be7d76c1e392d88bb7b"
 
-  url "https://github.com/block/goose/releases/download/v#{version}/Goose-#{version}-1.x86_64.rpm",
-      verified: "github.com/block/goose/"
+  url "https://github.com/aaif-goose/goose/releases/download/v#{version}/Goose-#{version}-1.x86_64-vulkan.rpm",
+      verified: "github.com/aaif-goose/goose/"
   name "Goose"
   desc "Open source, extensible AI agent that goes beyond code suggestions"
-  homepage "https://block.github.io/goose/"
+  homepage "https://goose-docs.ai/"
 
   livecheck do
-    url "https://github.com/block/goose/releases"
-    regex(%r{/v?(\d+(?:\.\d+)+)/Goose[._-]v?\d+(?:\.\d+)+-\d+\.x86_64\.rpm}i)
+    url "https://github.com/aaif-goose/goose/releases"
+    regex(%r{/v?(\d+(?:\.\d+)+)/Goose[._-]v?\d+(?:\.\d+)+-\d+\.x86_64(?:-[a-z0-9]+)?\.rpm}i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
@@ -34,7 +34,7 @@ cask "goose-linux" do
            target: "#{Dir.home}/.local/share/icons/Goose.png"
 
   preflight do
-    system "sh", "-c", "rpm2cpio '#{staged_path}/Goose-#{version}-1.x86_64.rpm' | cpio -idm --quiet",
+    system "sh", "-c", "rpm2cpio '#{staged_path}/Goose-#{version}-1.x86_64-vulkan.rpm' | cpio -idm --quiet",
            chdir: staged_path
 
     FileUtils.mkdir_p "#{Dir.home}/.local/share/applications"
